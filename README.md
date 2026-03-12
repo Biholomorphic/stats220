@@ -14,9 +14,9 @@ This is my public repo for STATS 220.
     * Content was pretty fun, exam wasn't exactly easy but was still cool to take, was not a fan of no lectures in Summer School though.
 * **ELECTENG 291**
 
-My favorite websites right now are:
-[Enourmous Engineering MCQ bank](https://www.sanfoundry.com/)
+My favorite websites right now are:<br>
+[Enourmous Engineering MCQ bank](https://www.sanfoundry.com/)<br>
 [LibreTexts](https://libretexts.org/)
 
-A meme that captures how I currently feel about my university studies is 
+A meme that captures how I currently feel about my university studies is.<br>
 ![til](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lbG50eDAwMG02andoOHNjZTF5cHMydGExcXU5ZmpkYjU1NWI1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XbnSI4OJqKevcUAamj/giphy.gif)
