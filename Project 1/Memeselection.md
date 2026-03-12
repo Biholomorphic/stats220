@@ -38,7 +38,7 @@ Git meme number 1. I do like this, I think its a close toss up between this and 
 <img src="../Assets/Proj1MemeSelection/gitmemes1.jpg" alt="Gitmeme2" width="500"><br>
 uhh git meme 2. It's OK I guess, idk. For some reason my CLI sometimes hates me and won't use my SSH key to push and asks for the now unsupported username/password verification, sometimes it work and use SSH though.
 
-## Selection Criteria
+## 2nd Selection Criteria Section cause I want to make it structured terribly hence the long heading section and idk why I'm even adding this into the repo its not even apart of the project so I don't think I'll lose marks for it maybe hopefully idk. Would Suck.
 - **100 points** : What I like more.
 - **0 points** : all other possible criteria.
 
