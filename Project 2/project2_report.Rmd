@@ -1,0 +1,157 @@
+---
+title: "Project 2"
+author: "Marlo Thacker"
+subtitle: "STATS 220 Semester One, 2026"
+output: html_document
+date: "2026-04-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{css, echo=FALSE}
+:root {
+  --bg: #eef3ef;
+  --ink: #1f2421;
+  --muted: #4d5a52;
+  --accent: #b2452e;
+  --accent-2: #2d6a4f;
+  --card: #f8fbf8;
+  --border: #21322b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono Nerd Font Mono', monospace;
+  background:
+    radial-gradient(circle at 15% 7%, #dfeee4 0%, transparent 36%),
+    radial-gradient(circle at 85% 2%, #d7e8de 0%, transparent 30%),
+    var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 11.5pt;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.2rem 2.2rem 2.8rem;
+}
+
+p {
+  margin-bottom: 1.5em;
+  text-align: justify;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'JetBrains Mono Nerd Font Mono', monospace;
+  color: var(--ink);
+}
+
+h1 {
+  width: fit-content;
+  margin: 0 auto 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  border-bottom: 4px solid var(--accent);
+  padding-bottom: 0.2rem;
+}
+
+
+h2 {
+  font-size: 1.6rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  padding-left: 0.7rem;
+  border-left: 6px solid var(--accent-2);
+  background: linear-gradient(to right, #eef8f8, transparent);
+}
+
+h2::after,
+h3::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+pre {
+  background-color: var(--card);
+  padding: 10px;
+  border: 3px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.figure,
+.plotly,
+figure {
+  margin: 1.2rem auto;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.12);
+  max-width: 92%;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+img:hover {
+  transform: translateY(-3px);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.16);
+}
+```
+
+## Introduction
+
+For my observational data collection we chose to collect data on the energy drinks observations the campuses of the University of Auckland and Auckland University of Technology. The period of time observed across was from the 16th of March to the 1st of April.
+
+The main form design aspect that I focused on during the form creation aspect of the project was the guideline on using validations rules. This was considered by leaving each question as a required question, and using regex to control the allowed responses. For example, under the UoA section regex was used to ensure that the building number entered was a valid number. This feature is additionally implemented for the AUT buildings. Another design consideration was that the form could be a hassle if on the move, so the way I collected data was by hand and then compiled into the form when I began working on the project, so the solution to this was adding in manual entries for the date and time of the observation, this also solved an additional problem of the submission timestamps not necessarily reflecting the time of the observation, eliminating a "I'll do it later and just remember the time" mindset that could easily forget or misremember. 
+
+The most useful statistic that this observational data collection has provided is the distribution of energy drink brands across all students. This is useful as it can be used to inform marketing strategies for companies looking to target students, and can also be used by universities to understand preferences of students and inform the types of drinks stocked in vending machines.
+
+[Link to Google Form](https://docs.google.com/forms/d/e/1FAIpQLSexc__eMRiCMXKJNU-MzzBTWaYjaouUiSkeme_3QoCvuOiFKA/viewform?usp=publish-editor)
+
+The form design and data collection for this project were completed as a group. My group was:
+- Marlo Thacker, mtha970 (Myself)
+- Johnathen Sewell, jsew317
+ 
+
+## Dynamic Report
+
+[Dynamic Report](https://biholomorphic.github.io/STATS220/)
+
+## Creativity
+
+My project demonstrates creativity by making decisions with the purpose of improving data quality, readability. During the form design process, I implemented validation rules using regex rules to restrict responses to specific inputs. This was done to make sure that the data collected was clean for analysis. In the dynamic report I focused on providing statistical summaries of the data, with bar graphs that communicated broader ideas such as brand distributions and summary statistics. Additionally, I tried to use CSS to intentionally improve the readability and the communication of my dynamic report.
+
+## Learning Reflection
+
+In Module Two, the most important idea in my mind was that data analysis is not necessarily about creating plots and calculating statistics, but rather about communicating information garnered from the data, and about building a reproducible workflow. The full project covering the pipeline from data collection to dynamic report and final project report has helped me to understand the importance of the flow of data analysis. Another important idea that I had not really considered before was the importance of preventing poor data from ever even reaching the stored data in the first place using validation checks.
+
+I am curious about creating a dynamic report that is more interactive in the future. One challenge in this project was that the collected data did not feel particularly informative, which made it hard to produce high quality insights and graphs/charts. This enlightened me to the importance of collecting data that has enough substance to it to be able to produce an analysis that actually shows meaningful information and insights. I would like to explore how to know what data will be useful to collect in the future. I would also like to explore more on regular expressions as a tool of input validation, my usage of it was basic and somewhat crude; I would like to learn how to use it more effectively in the future. 
+
+Working with a partner for the data collection was a straight forward process for us as we were in agreement with pretty much everything. We worked together to make sure that we each understood the reasoning behind our ideas for the form design.
+
+## Appendix
+
+```{r file='exploration.R', eval=FALSE, echo=TRUE}
+
+```
+```{r file='dynamic_report.Rmd', eval=FALSE, echo=TRUE}
+
+```

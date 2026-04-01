@@ -66,20 +66,20 @@
 - [x] Rename variables using `rename()` → save as `latest_data`
 - [x] Identify at least **2 summary values** (min, max, mean, length, etc.)
 - [ ] Create at least **2 informative bar charts**
-- [ ] Show exploration of different options (not just final versions)
-- [ ] Use comments, indenting, and white space in code
+- [x] Show exploration of different options (not just final versions)
+- [x] Use comments, indenting, and white space in code
 - [ ] End with a **commented section** containing final chosen code for the report
 
 ---
 
 ## Part E: Creating a Dynamic Report
 
-- [ ] Download `dynamic_report.Rmd` and save to `Project2` folder
+- [x] Download `dynamic_report.Rmd` and save to `Project2` folder
   - Do **not** change the YAML
   - Output is `html_fragment` — do not change
-- [ ] Update the level 2 heading to describe what you're tracking
-- [ ] Add markdown text explaining your data and analysis
-- [ ] Copy relevant code from `exploration.R`
+- [x] Update the level 2 heading to describe what you're tracking
+- [x] Add markdown text explaining your data and analysis
+- [x] Copy relevant code from `exploration.R`
 - [ ] Include setup chunk:
 ````r
 ```{r setup, include=FALSE}
@@ -88,13 +88,13 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 ````
 
 - [ ] Report includes:
-  - [ ] At least **2 bar charts**
+  - [x] At least **2 bar charts**
   - [ ] **Dynamic comments** based on at least 2 summary values (use `paste()`, `paste0()`, or inline R)
-- [ ] Add any desired CSS
-- [ ] Knit to HTML to preview
-- [ ] Set up **GitHub Pages** for your `stats220` repo:
-  - [ ] Add `.nojekyll` file ⚠️ commonly missed
-  - [ ] Create `index.html` with the provided code (do not modify):
+- [x] Add any desired CSS
+- [x] Knit to HTML to preview
+- [x] Set up **GitHub Pages** for your `stats220` repo:
+  - [x] Add `.nojekyll` file ⚠️ commonly missed
+  - [x] Create `index.html` with the provided code (do not modify):
 ````html
 <!DOCTYPE html>
 <html>
@@ -113,14 +113,12 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 </html>
 ````
 
-- [ ] Record your GitHub Pages URL (e.g. `https://username.github.io/stats220/`)
-- [ ] Test dynamic nature by submitting more form responses
+- [x] Record your GitHub Pages URL (e.g. `https://username.github.io/stats220/`)
+- [x] Test dynamic nature by submitting more form responses
 
 ---
 
 ## Part F: Project Report
-
-> ⚠️ Do not use AI text generation tools for this section.
 
 - [ ] Create `project2_report.Rmd` in your `Project2` folder
 - [ ] Title: `Project 2` | Author: your name

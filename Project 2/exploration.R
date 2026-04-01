@@ -3,7 +3,7 @@ library("tidyverse")
 logged_data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRHaMrOqii2tFpTH9s4SEv7Wv1PNuF7fwck5SOM9F2pXzyNibgYcm4KyM9qoM3O0jDUcoFIKnN7K4gF/pub?output=csv")
 str(logged_data)
 
-latest_data <- logged_data |>                                        # Renaming the data frame variables in a new data frame.
+latest_data <- logged_data %>%                                        # Renaming the data frame variables in a new data frame.
   rename(
     timestamp = Timestamp,
     campus = UoA.or.AUT.Campus.,
@@ -57,8 +57,8 @@ ggplot(summary_stats, aes(x = statistic, y = value, fill = statistic)) +
 
 
 
-busiest_per_day <- latest_data |>                                    # Daily peak based on single observations, not summed duplicates
-  group_by(observation_date) |>
+busiest_per_day <- latest_data %>%                                    # Daily peak based on single observations, not summed duplicates
+  group_by(observation_date) %>%
   summarise(total_quantity = max(quantity_seen, na.rm = TRUE), .groups = "drop")
 
 peak_date <- busiest_per_day$observation_date                        # PEAKS!!! For date and quantity
@@ -88,9 +88,9 @@ ggplot(busiest_per_day, aes(x = observation_date, y = total_quantity)) +
 
 # ---------- Brand Analysis ----------
 
-brand_summary <- latest_data |>
-  group_by(drink_brand) |>
-  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") |>
+brand_summary <- latest_data %>%
+  group_by(drink_brand) %>%
+  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") %>%
   arrange(desc(total_quantity))
 
 # This is to create a graph for the totals
@@ -119,9 +119,9 @@ ggplot(brand_summary, aes(x = forcats::fct_reorder(drink_brand, total_quantity),
 
 # ---------- Campus Based Analysis ----------
 
-campus_summary <- latest_data |>
-  group_by(campus) |>
-  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") |>
+campus_summary <- latest_data %>%
+  group_by(campus) %>%
+  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") %>%
   arrange(desc(total_quantity))
 
 ggplot(campus_summary, aes(x = forcats::fct_reorder(campus, total_quantity), y = total_quantity)) +

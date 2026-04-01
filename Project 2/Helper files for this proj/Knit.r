@@ -6,3 +6,5 @@
 library(rmarkdown)
 
 rmarkdown::render("dynamic_report.Rmd")
+
+rmarkdown::render("Project 2/project2_report.Rmd")

@@ -116,14 +116,14 @@ img:hover {
 
 ## Data Collected via Energy Drink Observations
 
-This analysis is based on observations of energy drink presence collecected from the University of Auckland and Auckland University of Technology campuses. The data was collected from myself: Marlo Thacker (mtha970) and Johnathen Sewell (jsew317) over the course of several days. The data captures snapshots of individual brands observed at specific times and places.
+This analysis is based on observations of energy drink presence collecected from the University of Auckland and Auckland University of Technology campuses. The data captures snapshots of individual brands observed at specific times and places.
 
 ```{r data-import}
 library("tidyverse")
 
 logged_data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRHaMrOqii2tFpTH9s4SEv7Wv1PNuF7fwck5SOM9F2pXzyNibgYcm4KyM9qoM3O0jDUcoFIKnN7K4gF/pub?output=csv")
 
-latest_data <- logged_data |>
+latest_data <- logged_data %>%
   rename(
     timestamp = Timestamp,
     campus = UoA.or.AUT.Campus.,
@@ -168,9 +168,9 @@ ggplot(summary_stats, aes(x = statistic, y = value, fill = statistic)) +
 The following chart shows the total quantity of each brand observed across all location snapshots:
 
 ```{r brand-chart}
-brand_summary <- latest_data |>
-  group_by(drink_brand) |>
-  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") |>
+brand_summary <- latest_data %>%
+  group_by(drink_brand) %>%
+  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") %>%
   arrange(desc(total_quantity))
 
 ggplot(brand_summary, aes(x = forcats::fct_reorder(drink_brand, total_quantity), y = total_quantity)) +
@@ -195,9 +195,9 @@ ggplot(brand_summary, aes(x = forcats::fct_reorder(drink_brand, total_quantity),
 The following chart displays the total quantity of energy drinks observed across each campus:
 
 ```{r campus-chart}
-campus_summary <- latest_data |>
-  group_by(campus) |>
-  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") |>
+campus_summary <- latest_data %>%
+  group_by(campus) %>%
+  summarise(total_quantity = sum(quantity_seen, na.rm = TRUE), .groups = "drop") %>%
   arrange(desc(total_quantity))
 
 ggplot(campus_summary, aes(x = forcats::fct_reorder(campus, total_quantity), y = total_quantity)) +
